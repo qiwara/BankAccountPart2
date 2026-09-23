@@ -4,7 +4,7 @@ class Savings(CoolBank):
 
     def __init__(self, customer_name, interest, routing_number):
         super().__init__(customer_name)
-        self.interest = 0.05
+        self.interest = interest
 
     def interest_calc(self):
         total_interest = self.current_balance * self.interest
