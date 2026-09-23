@@ -35,16 +35,4 @@ class CoolBank:
         print(f'*** IMPORTANT: Minimum balance can NEVER go under ${self.minimum_balance}! ***')
         print('--------------------------------------------------------')
         print('Thanks for using CoolBank!')
-        print('========================================================')
-
-bankacc1 = CoolBank("Parth")
-bankacc1.deposit(121)
-bankacc1.withdraw(20)
-bankacc1.withdraw(10)
-bankacc1.print_customer_information()
-
-bankacc2 = CoolBank("Luigi")
-bankacc2.deposit(250)
-bankacc2.withdraw(2)
-bankacc2.withdraw(11)
-bankacc2.print_customer_information()
+        print('========================================================\n')
