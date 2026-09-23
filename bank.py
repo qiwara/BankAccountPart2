@@ -8,6 +8,13 @@ class CoolBank:
         self.customer_name = customer_name
         self.current_balance = 0
         self.minimum_balance = 100
+        self._account_number = self.get_acc_num()
+        self.__routing_number = "16939682"
+
+    def get_acc_num(self):
+        accounts = 1
+        return accounts
+        accounts += 1
 
     def deposit(self, added_balance):
         self.current_balance += added_balance
@@ -23,6 +30,7 @@ class CoolBank:
     def print_customer_information(self):
         print(f'Hey {self.customer_name}! Lets take a look at your current balance at {self.bank_title}.')
         print('--------------------------------------------------------')
+        print(f'Account Number: {self._account_number}')
         print(f'Current Balance: ${self.current_balance}')
         print(f'*** IMPORTANT: Minimum balance can NEVER go under ${self.minimum_balance}! ***')
         print('--------------------------------------------------------')
