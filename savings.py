@@ -2,7 +2,7 @@ from bank import CoolBank
 
 class Savings(CoolBank):
 
-    def __init__(self, customer_name, interest, routing_number):
+    def __init__(self, customer_name, interest):
         super().__init__(customer_name)
         self.interest = interest
 

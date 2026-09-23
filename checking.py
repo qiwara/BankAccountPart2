@@ -6,7 +6,7 @@ class Checking(CoolBank):
         super().__init__(customer_name)
         self.transfer_limit = transfer_limit
 
-    # avoided using deposit() & withdraw() because they had print statements within that should be in transfer()
+    # avoided using deposit() & withdraw() because they had print statements within that shouldn't be in transfer()
     def transfer(self, transfer_amount, other_account):
         if transfer_amount > self.transfer_limit:
             print(f'{self.customer_name}, ${transfer_amount} could not be transferred. Transfer exceeds ${self.transfer_limit}\n')
@@ -15,4 +15,4 @@ class Checking(CoolBank):
         else:
             self.current_balance -= transfer_amount
             other_account.current_balance += transfer_amount
-            print(f'{self.customer_name}, ${transfer_amount} has been successfully transferred')
+            print(f'{self.customer_name}, ${transfer_amount} has been successfully transferred\n')
