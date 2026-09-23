@@ -3,6 +3,7 @@
 class CoolBank:
 
     bank_title = "Cool Bank"
+    _next_account = 1
 
     def __init__(self, customer_name):
         self.customer_name = customer_name
@@ -12,9 +13,8 @@ class CoolBank:
         self.__routing_number = "16939682"
 
     def get_acc_num(self):
-        accounts = 1
-        return accounts
-        accounts += 1
+        CoolBank._next_account += 1
+        return CoolBank._next_account
 
     def deposit(self, added_balance):
         self.current_balance += added_balance
