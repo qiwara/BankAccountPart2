@@ -2,8 +2,20 @@ from bank import CoolBank
 from checking import Checking
 from savings import Savings
 
-savingsAcct1 = Savings("Parth", 0.005)
-savingsAcct2 = Savings("Qi", 0.003)
+savingsAcct1 = Savings("Parth", 0.05)
+savingsAcct2 = Savings("Qi", 0.03)
+
+# Savings account setup
+savingsAcct1.deposit(200)
+savingsAcct2.deposit(1000)
+savingsAcct1.print_customer_information()
+savingsAcct2.print_customer_information()
+
+# Apply interest
+savingsAcct1.interest_calc()
+savingsAcct2.interest_calc()
+savingsAcct1.print_customer_information()
+savingsAcct2.print_customer_information()
 
 # Initial account setup
 checkingAcct1 = Checking("Qi", 1000)
